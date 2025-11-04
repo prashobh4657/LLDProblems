@@ -1,6 +1,7 @@
 public class OnlineShoppingServiceDemo {
     public static void run() {
-        System.out.println("Running Online Shopping Service Demo...");
+        System.out.println("Starting OnlineShoppingService Demo...");
         // Add demo logic here
+        System.out.println("Ending OnlineShoppingService Demo...");
     }
 }

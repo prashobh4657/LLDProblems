@@ -1,6 +1,7 @@
 public class MusicStreamingServiceDemo {
     public static void run() {
-        System.out.println("Running Music Streaming Service Demo...");
+        System.out.println("Starting MusicStreamingService Demo...");
         // Add demo logic here
+        System.out.println("Ending MusicStreamingService Demo...");
     }
 }

@@ -1,3 +1,5 @@
+package SocialNetworkingService;
+
 public class SocialNetworkingServiceDemo {
     public static void run() {
         System.out.println("Starting SocialNetworkingService Demo...");

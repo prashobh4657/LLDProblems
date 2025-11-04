@@ -1,3 +1,5 @@
+package VotingSystem;
+
 public class VotingSystemDemo {
     public static void run() {
         System.out.println("Starting VotingSystem Demo...");

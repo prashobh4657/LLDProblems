@@ -1,3 +1,5 @@
+package LoggingFramework;
+
 public class LoggingFrameworkDemo {
     public static void run() {
         System.out.println("Starting LoggingFramework Demo...");

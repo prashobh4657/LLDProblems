@@ -1,3 +1,5 @@
+package AuctionSystem;
+
 public class AuctionSystemDemo {
     public static void run() {
         System.out.println("Starting AuctionSystem Demo...");

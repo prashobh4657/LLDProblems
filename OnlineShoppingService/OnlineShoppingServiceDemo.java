@@ -1,3 +1,5 @@
+package OnlineShoppingService;
+
 public class OnlineShoppingServiceDemo {
     public static void run() {
         System.out.println("Starting OnlineShoppingService Demo...");

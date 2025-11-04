@@ -1,3 +1,5 @@
+package SnakeAndLadder;
+
 public class SnakeAndLadderDemo {
     public static void run() {
         System.out.println("Starting SnakeAndLadder Demo...");

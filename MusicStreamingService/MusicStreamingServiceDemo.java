@@ -1,3 +1,5 @@
+package MusicStreamingService;
+
 public class MusicStreamingServiceDemo {
     public static void run() {
         System.out.println("Starting MusicStreamingService Demo...");

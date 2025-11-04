@@ -1,3 +1,5 @@
+package ElevatorSystem;
+
 public class ElevatorSystemDemo {
     public static void run() {
         System.out.println("Starting ElevatorSystem Demo...");

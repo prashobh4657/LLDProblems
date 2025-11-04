@@ -1,3 +1,5 @@
+package LinkedIn;
+
 public class LinkedInDemo {
     public static void run() {
         System.out.println("Starting LinkedIn Demo...");

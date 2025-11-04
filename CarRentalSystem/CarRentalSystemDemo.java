@@ -1,3 +1,5 @@
+package CarRentalSystem;
+
 public class CarRentalSystemDemo {
     public static void run() {
         System.out.println("Starting CarRentalSystem Demo...");

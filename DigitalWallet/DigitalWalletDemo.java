@@ -1,3 +1,5 @@
+package DigitalWallet;
+
 public class DigitalWalletDemo {
     public static void run() {
         System.out.println("Starting DigitalWallet Demo...");

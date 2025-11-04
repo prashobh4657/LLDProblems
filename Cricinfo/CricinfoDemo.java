@@ -1,3 +1,5 @@
+package Cricinfo;
+
 public class CricinfoDemo {
     public static void run() {
         System.out.println("Starting Cricinfo Demo...");

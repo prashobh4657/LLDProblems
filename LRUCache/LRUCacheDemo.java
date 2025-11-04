@@ -1,3 +1,5 @@
+package LRUCache;
+
 public class LRUCacheDemo {
     public static void run() {
         System.out.println("Starting LRUCache Demo...");

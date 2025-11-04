@@ -1,3 +1,5 @@
+package ChessGame;
+
 public class ChessGameDemo {
     public static void run() {
         System.out.println("Starting ChessGame Demo...");

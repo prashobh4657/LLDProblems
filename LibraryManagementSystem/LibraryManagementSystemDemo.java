@@ -1,3 +1,5 @@
+package LibraryManagementSystem;
+
 public class LibraryManagementSystemDemo {
     public static void run() {
         System.out.println("Starting LibraryManagementSystem Demo...");

@@ -1,3 +1,5 @@
+package VendingMachine;
+
 public class VendingMachineDemo {
     public static void run() {
         System.out.println("Starting VendingMachine Demo...");

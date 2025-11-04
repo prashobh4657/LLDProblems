@@ -1,3 +1,5 @@
+package MovieTicketBooking;
+
 public class MovieTicketBookingDemo {
     public static void run() {
         System.out.println("Starting MovieTicketBooking Demo...");

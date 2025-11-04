@@ -1,3 +1,5 @@
+package StockBrokerageSystem;
+
 public class StockBrokerageSystemDemo {
     public static void run() {
         System.out.println("Starting StockBrokerageSystem Demo...");

@@ -1,3 +1,5 @@
+package FoodDeliveryService;
+
 public class FoodDeliveryServiceDemo {
     public static void run() {
         System.out.println("Starting FoodDeliveryService Demo...");

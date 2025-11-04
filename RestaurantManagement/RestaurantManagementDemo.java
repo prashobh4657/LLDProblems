@@ -1,3 +1,5 @@
+package RestaurantManagement;
+
 public class RestaurantManagementDemo {
     public static void run() {
         System.out.println("Starting RestaurantManagement Demo...");

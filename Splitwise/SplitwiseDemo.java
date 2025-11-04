@@ -1,3 +1,5 @@
+package Splitwise;
+
 public class SplitwiseDemo {
     public static void run() {
         System.out.println("Starting Splitwise Demo...");

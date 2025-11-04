@@ -1,3 +1,5 @@
+package RideSharingService;
+
 public class RideSharingServiceDemo {
     public static void run() {
         System.out.println("Starting RideSharingService Demo...");

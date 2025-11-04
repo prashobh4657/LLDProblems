@@ -1,3 +1,5 @@
+package CourseRegistrationSystem;
+
 public class CourseRegistrationSystemDemo {
     public static void run() {
         System.out.println("Starting CourseRegistrationSystem Demo...");

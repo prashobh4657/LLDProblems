@@ -29,10 +29,10 @@ public class ATMSystem {
     public void insertCard(String string) {
         currentState.insertCard(string);
     }
+
     public void enterPin(int pin) {
         currentState.enterPin(pin);
     }
-
 
     public void ejectCard() {
         currentState.ejectCard();
@@ -45,7 +45,12 @@ public class ATMSystem {
     public void setCurrentState(ATMState state) {
         this.currentState = state;
     }
-    public void setCurrentCard(Card card){
+
+    public ATMState getCurrentState() {
+        return this.currentState;
+    }
+
+    public void setCurrentCard(Card card) {
         this.currentCard = card;
     }
 

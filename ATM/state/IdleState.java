@@ -1,10 +1,9 @@
 package ATM.state;
 
-import java.util.Objects;
-
 import ATM.ATMSystem;
 import ATM.OperationType;
 import ATM.entities.Card;
+import java.util.Objects;
 
 public class IdleState implements ATMState {
 
@@ -17,19 +16,22 @@ public class IdleState implements ATMState {
     @Override
     public void insertCard(String cardNumber) {
         System.out.println("Card inserted. Transitioning to CardInsertedState.");
+        atmSystem.setCurrentState(new HasCardState(atmSystem));
+        System.out.println("lkjlk");
+        System.out.println("Debug: Retrieving card for number " + atmSystem.getCurrentState());
         Card card = atmSystem.getCard(cardNumber);
 
         if (Objects.isNull(card)) {
             System.out.println("Card Number Not Found. Ejecting card.");
+            atmSystem.ejectCard();
         } else {
             atmSystem.setCurrentCard(card);
-            atmSystem.setCurrentState(new HasCardState(atmSystem));
         }
     }
 
     @Override
     public void ejectCard() {
-        System.out.println("No card to eject. ATM is idle.");
+        System.out.println("No card inserted. ATM is already in idle state.");
     }
 
     @Override

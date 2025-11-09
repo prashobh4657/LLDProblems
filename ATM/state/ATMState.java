@@ -1,11 +1,13 @@
 package ATM.state;
 
+import ATM.OperationType;
+
 public interface ATMState {
-    void insertCard();
+    void insertCard(String cardNumber);
 
     void ejectCard();
 
     void enterPin(int pin);
 
-    void withdrawCash(double amount);
+    void selectOperation(OperationType operationType, int... args);
 }

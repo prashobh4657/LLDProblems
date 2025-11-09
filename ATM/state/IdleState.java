@@ -17,8 +17,7 @@ public class IdleState implements ATMState {
     public void insertCard(String cardNumber) {
         System.out.println("Card inserted. Transitioning to CardInsertedState.");
         atmSystem.setCurrentState(new HasCardState(atmSystem));
-        System.out.println("lkjlk");
-        System.out.println("Debug: Retrieving card for number " + atmSystem.getCurrentState());
+
         Card card = atmSystem.getCard(cardNumber);
 
         if (Objects.isNull(card)) {

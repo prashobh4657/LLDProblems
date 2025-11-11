@@ -1,16 +1,16 @@
-package ATM;
-
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
+package ATM.service;
 
 import ATM.entities.Account;
 import ATM.entities.Card;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class BankService {
-    private final Map<String, Account> accounts = new ConcurrentHashMap<>(); 
-    private final Map<String, Card> cards = new ConcurrentHashMap<>(); //Card Number to Card Object Mapping
+    private final Map<String, Account> accounts = new ConcurrentHashMap<>();
+    private final Map<String, Card> cards = new ConcurrentHashMap<>(); // Card Number to Card Object Mapping
     private final Map<Card, Account> cardAccountMap = new ConcurrentHashMap<>();
-    public BankService(){
+
+    public BankService() {
         // Create sample accounts and cards
         Account account1 = createAccount("1234567890", 1000.0);
         Card card1 = createCard("1234-5678-9012-3456", 2345);
@@ -21,10 +21,10 @@ public class BankService {
         linkCardToAccount(card2, account2);
 
     }
+
     public Card getCard(String cardNumber) {
         return cards.getOrDefault(cardNumber, null);
     }
-
 
     public Account createAccount(String accountNumber, double initialBalance) {
         Account account = new Account(accountNumber, initialBalance);
@@ -45,5 +45,18 @@ public class BankService {
 
     public boolean authenticate(Card currentCard, int pin) {
         return currentCard.getPin() == pin;
+    }
+
+    public double getBalance(Card card) {
+        return cardAccountMap.get(card).getBalance();
+    }
+
+    public void withdraw(Card currentCard, int amount) {
+        cardAccountMap.get(currentCard).withdraw(amount);
+    }
+
+    public void deposit(Card currentCard, int amount) {
+        cardAccountMap.get(currentCard).deposit(amount);
+
     }
 }

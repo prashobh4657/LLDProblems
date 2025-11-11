@@ -25,20 +25,20 @@ public class HasCardState implements ATMState {
     @Override
     public void enterPin(int pin) {
         System.out.println("PIN entered. Validating...");
-        boolean isAuthenticated = atmSystem.authenticate(pin);;
+        boolean isAuthenticated = atmSystem.authenticate(pin);
 
         if (isAuthenticated) {
             System.out.println("Authentication successful.");
             atmSystem.setCurrentState(new AuthenticatedState(atmSystem));
         } else {
             System.out.println("Authentication failed: Incorrect PIN.");
-            ejectCard();
+            atmSystem.ejectCard();
         }
     }
 
     @Override
     public void selectOperation(OperationType operationType, int... args) {
-        System.out.println("Withdrawing cash: " + args[0]);
+        System.out.println("Error: Please enter your PIN first to select an operation.");
     }
 
 }

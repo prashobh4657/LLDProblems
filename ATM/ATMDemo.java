@@ -5,12 +5,16 @@ public class ATMDemo {
         System.out.println("Starting ATM Demo...");
         ATMSystem atmSystem = ATMSystem.getInstance();
 
-        atmSystem.insertCard("1234-5678-9012-345");
+        atmSystem.insertCard("1234-5678-9012-3456");
         atmSystem.enterPin(23452);
 
-        // atmSystem.insertCard("1234-5678-9012-3456");
-        // atmSystem.enterPin(2345);
-
+        atmSystem.insertCard("1234-5678-9012-3456");
+        atmSystem.enterPin(2345);
+        atmSystem.selectOperation(OperationType.CHECK_BALANCE);
+        atmSystem.selectOperation(OperationType.DEPOSIT_CASH,100);
+        atmSystem.selectOperation(OperationType.CHECK_BALANCE);
+        atmSystem.selectOperation(OperationType.WITHDRAW_CASH,500);
+        atmSystem.selectOperation(OperationType.CHECK_BALANCE);
         // atmSystem.ejectCard();
 
         // System.out.println("Ending ATM Demo...");

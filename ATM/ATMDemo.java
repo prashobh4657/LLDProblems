@@ -5,18 +5,35 @@ public class ATMDemo {
         System.out.println("Starting ATM Demo...");
         ATMSystem atmSystem = ATMSystem.getInstance();
 
-        atmSystem.insertCard("1234-5678-9012-3456");
-        atmSystem.enterPin(23452);
-
+        // Perform Check Balance operation
         atmSystem.insertCard("1234-5678-9012-3456");
         atmSystem.enterPin(2345);
-        atmSystem.selectOperation(OperationType.CHECK_BALANCE);
-        atmSystem.selectOperation(OperationType.DEPOSIT_CASH,100);
-        atmSystem.selectOperation(OperationType.CHECK_BALANCE);
-        atmSystem.selectOperation(OperationType.WITHDRAW_CASH,500);
-        atmSystem.selectOperation(OperationType.CHECK_BALANCE);
-        // atmSystem.ejectCard();
+        atmSystem.selectOperation(OperationType.CHECK_BALANCE); // $1000
 
-        // System.out.println("Ending ATM Demo...");
+        // Perform Withdraw Cash operation
+        atmSystem.insertCard("1234-5678-9012-3456");
+        atmSystem.enterPin(2345);
+        atmSystem.selectOperation(OperationType.WITHDRAW_CASH, 570);
+
+        // Perform Deposit Cash operation
+        atmSystem.insertCard("1234-5678-9012-3456");
+        atmSystem.enterPin(2345);
+        atmSystem.selectOperation(OperationType.DEPOSIT_CASH, 200);
+
+        // Perform Check Balance operation
+        atmSystem.insertCard("1234-5678-9012-3456");
+        atmSystem.enterPin(2345);
+        atmSystem.selectOperation(OperationType.CHECK_BALANCE); // $630
+
+        // Perform Withdraw Cash more than balance
+        atmSystem.insertCard("1234-5678-9012-3456");
+        atmSystem.enterPin(2345);
+        atmSystem.selectOperation(OperationType.WITHDRAW_CASH, 700); // Insufficient balance
+
+        // Insert Incorrect PIN
+        atmSystem.insertCard("1234-5678-9012-3456");
+        atmSystem.enterPin(3425);
+        
+        System.out.println("Ending ATM Demo...");
     }
 }

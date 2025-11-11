@@ -47,6 +47,10 @@ public class AuthenticatedState implements ATMState {
             default:
                 System.out.println("Invalid operation selected.");
         }
+
+        // End the session after one transaction
+        System.out.println("Transaction complete.");
+        atmSystem.ejectCard();
     }
 
 }

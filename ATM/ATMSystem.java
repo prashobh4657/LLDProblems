@@ -1,5 +1,9 @@
 package ATM;
 
+import ATM.dispenseChain.DispenseChain;
+import ATM.dispenseChain.NoteDispenser100;
+import ATM.dispenseChain.NoteDispenser20;
+import ATM.dispenseChain.NoteDispenser50;
 import ATM.entities.*;
 import ATM.service.BankService;
 import ATM.state.ATMState;
@@ -11,6 +15,7 @@ public class ATMSystem {
     private ATMState currentState;
     private BankService bankService;
     private Card currentCard;
+    private CashDispenser cashDispenser;
 
     private ATMSystem() {
         this.currentState = new IdleState(this);
@@ -18,6 +23,13 @@ public class ATMSystem {
         this.bankService = new BankService();
 
         // Setup cash Dispensers;
+        // Setup the dispenser chain
+        DispenseChain c1 = new NoteDispenser100(10); // 10 x $100 notes
+        DispenseChain c2 = new NoteDispenser50(20); // 20 x $50 notes
+        DispenseChain c3 = new NoteDispenser20(30); // 30 x $20 notes
+        c1.setNextChain(c2);
+        c2.setNextChain(c3);
+        this.cashDispenser = new CashDispenser(c1);
     }
 
     public static ATMSystem getInstance() {
@@ -93,9 +105,11 @@ public class ATMSystem {
         bankService.withdraw(currentCard, amount);
 
         try {
+            System.out.println("Dispensing cash...");
             cashDispenser.dispenseCash(amount);
+            System.out.println("Please take your cash.");
         } catch (Exception e) {
-            bankService.depositMoney(currentCard, amount); // Deposit back if dispensing fails
+            bankService.deposit(currentCard, amount); // Deposit back if dispensing fails
         }
 
     }

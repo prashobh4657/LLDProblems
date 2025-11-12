@@ -1,9 +1,9 @@
-import ATM.ATMDemo;
+import VotingSystem.VotingSystemDemo;
 
 public class LLDMasterRunner {
     public static void main(String[] args) {
         // AirlineManagementSystemDemo.run();
-        ATMDemo.run();
+        // ATMDemo.run();
         // CarRentalSystemDemo.run();
         // ChessGameDemo.run();
         // CoffeeVendingMachineDemo.run();
@@ -35,12 +35,14 @@ public class LLDMasterRunner {
         // TicTacToeDemo.run();
         // TrafficSignalSystemDemo.run();
         // VendingMachineDemo.run();
-        // VotingSystemDemo.run();
+        VotingSystemDemo.run();
     }
 
 }
 /*
  * LLD Master Runner
- * This class serves as the main entry point to run various Low-Level Design (LLD) system demos. Uncomment the desired demo to execute it.
- * Execute command : find . -name "*.class" -delete && javac LLDMasterRunner.java && java LLDMasterRunner 
+ * This class serves as the main entry point to run various Low-Level Design
+ * (LLD) system demos. Uncomment the desired demo to execute it.
+ * Execute command : find . -name "*.class" -delete && javac
+ * LLDMasterRunner.java && java LLDMasterRunner
  */

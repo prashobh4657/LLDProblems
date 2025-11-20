@@ -41,11 +41,13 @@ public class VotingSystemDemo {
                     });
             futureList.add(future);
         }
+        System.out.println("All voting tasks submitted.");
 
         for (Future<Boolean> future : futureList) {
             try {
                 future.get();
             } catch (Exception e) {
+                System.err.println("Error while casting vote: " + e.getMessage());
                 e.printStackTrace();
             }
         }
